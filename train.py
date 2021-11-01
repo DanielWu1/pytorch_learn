@@ -63,6 +63,8 @@ for i in range(epoch):
     writer.add_scalar("test_acc", total_acc/test_data_size, total_test_step)
     total_test_step += 1
 
+    torch.save(tudui, "tudui_{}.pth".format(i))
+
 writer.close()
 
 
